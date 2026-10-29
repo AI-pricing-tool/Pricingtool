@@ -65,6 +65,40 @@ statement that cannot be read is marked **Failed**, with the reason shown beside
 the AI provider charges you for each statement it reads once you go beyond them. Check
 their current pricing pages before you start.
 
+## What works out of the box, and what you add
+
+This project is a working skeleton. The parts that read and price statements are built
+and tested. The parts that make it *yours* are left for you to supply.
+
+**Already built and checked**
+
+- Sign-up, sign-in, and every screen in the app.
+- The database setup, including the list of standard card categories (UK, EU, non-EU
+  and US card types).
+- The statement rules. On a public US sample statement, 26 fee lines went in: 13 were
+  removed as pass-through costs that are not your margin, 5 were matched to card
+  categories, 5 ambiguous product codes were left for you to review rather than guessed,
+  and 3 were kept as ordinary fees (monthly fee, PCI fee, Amex per-item fee).
+- Clear failure handling: a statement that cannot be read is marked **Failed**, with the
+  reason shown.
+
+**What you need to add**
+
+| You add | Why |
+| --- | --- |
+| A Supabase project | It stores your accounts, statements and rates. |
+| An AI provider key | It reads the statements. Nothing is read without one. |
+| Your buy rates | The app ships with none. Every saving and margin comes from your rates. |
+| Your commission split and margin targets | The values supplied are arbitrary examples. |
+| Your own forecasting data | The forecasting screens show invented sample data until you replace it. |
+| Your name and branding | The app is called Pricing Tool and uses a placeholder logo. |
+| Google sign-in and hosting (optional) | Only if you want social sign-in or a public web address. |
+
+**An honest note.** The statement rules were checked on sample statements, and the AI
+reading step was written against each provider's documentation but has not been run on a
+large range of real statements. Try your own statements first. Expect some lines to be
+left for review. That is by design.
+
 ## Why this exists
 
 The interesting part of this codebase is not the UI. It is the accumulated statement
