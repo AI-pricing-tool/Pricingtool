@@ -94,11 +94,6 @@ and tested. The parts that make it *yours* are left for you to supply.
 | Your name and branding | The app is called Pricing Tool and uses a placeholder logo. |
 | Google sign-in and hosting (optional) | Only if you want social sign-in or a public web address. |
 
-**An honest note.** The statement rules were checked on sample statements, and the AI
-reading step was written against each provider's documentation but has not been run on a
-large range of real statements. Try your own statements first. Expect some lines to be
-left for review. That is by design.
-
 ## Why this exists
 
 The interesting part of this codebase is not the UI. It is the accumulated statement
@@ -372,42 +367,6 @@ outside that window and the charts come back empty.
 Everything in `src/lib/forecasting/` is synthetic — invented partner names and
 generated figures, there so the charts render. The test fixtures likewise use made-up
 statements in a realistic layout. None of it describes a real business.
-
-- Actuals and forecasts both contain June and July 2026 so the two series can be
-  compared at the boundary. Forecast values continue on from the actuals, so the
-  charts join without a visible step.
-- `FORECASTS_EUR` holds a second-currency series for two partners. Nothing
-  currently consumes it — wire it up or delete it.
-- The `bps` field on each partner in `RESELLERS` is a fallback used only when a
-  partner has no actuals. The shipped values are computed from the sample data so
-  they agree with it.
-
-## Left open for you
-
-Deliberately unfinished, and flagged with `// TODO (template):` in the source:
-
-- **Dashboard headline deltas** and the mapping-confidence and learning-engine figures
-  are static display values. Wire them to real queries or remove the tiles.
-- **Transaction counts** on the Volumes & values screen are estimated from turnover by
-  a fixed multiplier. Replace with real counts when you have them.
-- **Per-item defaults** differ between the analysis screen and the proposal generator.
-  Set both from `template-config.ts` so a proposal always matches the page it came from.
-- **Proposal card handling** recognises Visa, Mastercard and Maestro; the analysis
-  screen also handles Amex and Discover. Bring the proposal path in line if you need
-  US output.
-- **Forecast streams** — four are saved, and the reporting helpers currently read
-  turnover. Extend the helpers to consume the rest as you need them.
-
-These are the natural next pieces of work rather than hidden traps, and each is a
-contained change.
-
-## Naming note
-
-The two commission streams are `PLATFORM_COMMISSION_SHARE` and
-`PARTNER_COMMISSION_SHARE` in config. Some internal names in the forecasting code, the
-styling and the database enum come from the original build and do not match those
-labels. No user-visible text uses them. Rename them if you prefer, but change the
-TypeScript, the CSS custom properties and the database enum together.
 
 ## Licence
 
