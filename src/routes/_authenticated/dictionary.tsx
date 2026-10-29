@@ -43,7 +43,7 @@ function DictionaryPage() {
             <tr className="text-left">
               <th className="px-4 py-2 font-medium">Acquirer</th>
               <th className="px-4 py-2 font-medium">Raw description</th>
-              <th className="px-4 py-2 font-medium">Canonical</th>
+              <th className="px-4 py-2 font-medium">Standard category</th>
               <th className="px-4 py-2 font-medium">Source</th>
               <th className="px-4 py-2 font-medium text-right">Usage</th>
               <th className="px-4 py-2 font-medium text-right">Confidence</th>

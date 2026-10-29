@@ -173,7 +173,7 @@ function StatementReview() {
               <th className="px-3 py-3 font-medium text-right">Value</th>
               <th className="px-3 py-3 font-medium text-right">Rate</th>
               <th className="px-3 py-3 font-medium text-right">Fee</th>
-              <th className="px-3 py-3 font-medium">Canonical category</th>
+              <th className="px-3 py-3 font-medium">Standard category</th>
               <th className="px-3 py-3 font-medium">Confidence</th>
               <th className="px-3 py-3 font-medium">Status</th>
             </tr>

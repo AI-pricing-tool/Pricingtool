@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Pricing Tool — Merchant Statement Intelligence" },
-      { name: "description", content: "Upload UK merchant statements, normalise card fees into a canonical taxonomy, and generate proposals in minutes." },
+      { name: "description", content: "Upload UK merchant statements, normalise card fees into standard categories, and generate proposals in minutes." },
     ],
   }),
   component: Landing,
@@ -49,7 +49,7 @@ function Landing() {
               Merchant statements, <span className="text-gradient-brand">decoded</span> in seconds.
             </h1>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Upload statements from Worldpay, Barclaycard, Stripe, Dojo and more. Pricing Tool normalises every fee into a canonical taxonomy, calculates merchant savings, and generates branded proposals — automatically.
+              Upload statements from Worldpay, Barclaycard, Stripe, Dojo and more. Pricing Tool sorts every fee into standard categories, calculates merchant savings, and generates branded proposals — automatically.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button asChild size="lg" className="bg-gradient-brand text-primary-foreground shadow-elevated">

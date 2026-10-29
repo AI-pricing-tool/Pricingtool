@@ -166,7 +166,7 @@ function UploadPage() {
 
   return (
     <>
-      <PageHeader title="Upload statement" description="PDF, CSV, XLSX, or image. We'll extract every fee line and map it to canonical categories." />
+      <PageHeader title="Upload statement" description="PDF, CSV, XLSX, or image. We'll extract every fee line and map it to a standard category." />
 
       <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-4">

@@ -161,8 +161,8 @@ function BuyRatesPage() {
         title="Buy rates"
         description={
           isSuperAdmin
-            ? "Set the buy rate for each canonical card type. These feed margin calculations on every proposal."
-            : "View buy rates per canonical card type (admin-only to edit)."
+            ? "Set the buy rate for each card type. These feed margin calculations on every proposal."
+            : "View buy rates per card type (only admins can edit)."
         }
       />
 

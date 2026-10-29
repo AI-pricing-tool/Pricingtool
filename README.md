@@ -4,7 +4,7 @@ A working application for reading card-processing merchant statements, normalisi
 them, and pricing them against your own cost base.
 
 Upload a statement from an acquirer, and the app extracts every fee line, classifies
-each card line into a canonical category, strips pass-through interchange where it
+each card line into a standard category, strips pass-through interchange where it
 applies, compares the result against your buy rates, and produces a proposal showing
 the merchant's current cost versus yours.
 
