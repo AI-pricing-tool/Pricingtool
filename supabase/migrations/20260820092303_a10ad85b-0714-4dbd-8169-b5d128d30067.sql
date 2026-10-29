@@ -1,0 +1,9 @@
+-- Intentionally empty.
+--
+-- This migration used to grant super_admin to one specific account and assign it an organisation,
+-- using that account's hard-coded user id. That cannot work on any other database (the user does not
+-- exist, so the foreign key fails and every later migration is blocked), and a user id does not belong
+-- in a public repository.
+--
+-- The file is kept, rather than deleted, so the migration history stays aligned for anyone who already
+-- applied the original. To create your first admin, see "Make yourself an admin" in the README.
